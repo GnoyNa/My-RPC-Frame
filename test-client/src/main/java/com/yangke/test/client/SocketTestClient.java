@@ -3,11 +3,16 @@ package com.yangke.test.client;
 import com.yangke.rpc.api.HelloObject;
 import com.yangke.rpc.api.HelloService;
 import com.yangke.rpc.client.RpcClientProxy;
+import com.yangke.rpc.socket.SocketClient;
 
-public class TestClient {
+/**
+ * Socket方式远程方法调用的消费者（客户端）
+ */
+public class SocketTestClient {
 
     public static void main(String[] args) {
-        RpcClientProxy proxy = new RpcClientProxy("127.0.0.1", 9000);
+        SocketClient client = new SocketClient("127.0.0.1", 9000);
+        RpcClientProxy proxy = new RpcClientProxy(client);
         HelloService helloService = proxy.getProxy(HelloService.class);
         HelloObject object = new HelloObject(12, "This is a message");
         String res = helloService.hello(object);

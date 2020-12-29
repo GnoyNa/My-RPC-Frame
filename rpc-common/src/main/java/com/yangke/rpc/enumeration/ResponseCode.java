@@ -1,4 +1,4 @@
-package com.yangke.rpc.common.enumeration;
+package com.yangke.rpc.enumeration;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

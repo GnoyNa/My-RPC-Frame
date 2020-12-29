@@ -1,8 +1,7 @@
-package com.yangke.rpc.common.entity;
+package com.yangke.rpc.entity;
 
-import com.yangke.rpc.common.enumeration.ResponseCode;
+import com.yangke.rpc.enumeration.ResponseCode;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -12,6 +11,9 @@ import java.io.Serializable;
 @Data
 public class RpcResponse<T> implements Serializable {
 
+    public RpcResponse() {
+
+    }
     /**
      * 响应对应的请求号
      */
